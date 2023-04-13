@@ -9,11 +9,14 @@ namespace csharp_abstract_animals
     internal abstract class Animale
     {
         //The animal's name
-        public string Name { get; private set; }
+        public string Specie { get; private set; }
+        public string Nome { get; private set; }
+        public string NomeCompleto => $"{Specie} {Nome}";
 
-        public Animale(string name)
+        public Animale(string specie, string nome)
         {
-            Name = name;
+            Specie = specie;
+            Nome = nome;
         }
 
         /* "Dormi" Function
@@ -37,7 +40,7 @@ namespace csharp_abstract_animals
         public void Print()
         {
             // Print animal name
-            Console.WriteLine($"Animale: {Name}");
+            Console.WriteLine($"Animale: {NomeCompleto}");
 
             // Print animal sound
             Console.Write("Verso: ");
