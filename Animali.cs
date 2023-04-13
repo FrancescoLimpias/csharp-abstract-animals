@@ -23,7 +23,7 @@ namespace csharp_abstract_animals
         }
     }
 
-    internal class Passerotto : Animale
+    internal class Passerotto : Animale, IVolante
     {
         public Passerotto(string nome) : base("Passerotto", nome)
         { }
@@ -39,7 +39,7 @@ namespace csharp_abstract_animals
         }
     }
 
-    internal class Aquila : Animale
+    internal class Aquila : Animale, IVolante
     {
         public Aquila(string nome) : base("Aquila", nome)
         { }
@@ -55,7 +55,7 @@ namespace csharp_abstract_animals
         }
     }
 
-    internal class Delfino : Animale
+    internal class Delfino : Animale, INuotante
     {
         public Delfino(string nome) : base("Delfino", nome)
         { }

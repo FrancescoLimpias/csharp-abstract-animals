@@ -13,7 +13,19 @@
 
             foreach (Animale animale in animali)
             {
+
+                //Print animal details
                 animale.Print();
+
+                //Check if animal flies
+                if (animale is IVolante)
+                    ((IVolante) animale).Vola();
+
+                //Check if animal swims
+                if (animale is INuotante)
+                    ((INuotante)animale).Nuota();
+
+
                 Console.WriteLine("-------------");
             }
         }

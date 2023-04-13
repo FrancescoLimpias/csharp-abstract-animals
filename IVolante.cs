@@ -10,7 +10,7 @@ namespace csharp_abstract_animals
     {
         void Vola()
         {
-            Console.Write("Sto volando!!!");
+            Console.WriteLine("Sto volando!!!");
         }
     }
 }
