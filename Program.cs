@@ -10,20 +10,44 @@
             animali.Add(new Passerotto("domestico"));
             animali.Add(new Aquila("reale"));
             animali.Add(new Delfino("striato"));
+            animali.Add(new Mucca("comune"));
 
             foreach (Animale animale in animali)
             {
 
-                //Print animal details
-                animale.Print();
+                // Print animal name
+                Console.WriteLine($"Animale: {animale.NomeCompleto}");
 
+                /* ****************************
+                 * PRIMO ESERCIZIO
+                 * ****************************
+                 */
+                // Print animal sound
+                Console.Write("Verso: ");
+                animale.Verso();
+                Console.WriteLine();
+
+                // Print animal foods
+                Console.Write($"Dieta: [{animale.Dieta}] ");
+                animale.Mangia();
+                Console.WriteLine();
+
+                // Print animal while sleeping
+                Console.Write("Dorme: ");
+                animale.Dormi();
+                Console.WriteLine();
+
+                /* ****************************
+                 * SECONDO ESERCIZIO
+                 * ****************************
+                 */
                 //Check if animal flies
                 if (animale is IVolante)
-                    ((IVolante) animale).Vola();
+                    FaiVolare((IVolante) animale);
 
                 //Check if animal swims
                 if (animale is INuotante)
-                    ((INuotante)animale).Nuota();
+                    FaiNuotare((INuotante) animale);
 
 
                 Console.WriteLine("-------------");

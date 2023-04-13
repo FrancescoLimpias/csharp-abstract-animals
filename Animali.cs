@@ -9,7 +9,7 @@ namespace csharp_abstract_animals
     internal class Cane : Animale
     {
 
-        public Cane(string nome) : base("Cane", nome)
+        public Cane(string nome) : base("Cane", nome, Dieta.Onnivoro)
         { }
 
         //Abstract class implementations
@@ -25,7 +25,7 @@ namespace csharp_abstract_animals
 
     internal class Passerotto : Animale, IVolante
     {
-        public Passerotto(string nome) : base("Passerotto", nome)
+        public Passerotto(string nome) : base("Passerotto", nome, Dieta.Onnivoro)
         { }
 
         //Abstract class implementations
@@ -41,7 +41,7 @@ namespace csharp_abstract_animals
 
     internal class Aquila : Animale, IVolante
     {
-        public Aquila(string nome) : base("Aquila", nome)
+        public Aquila(string nome) : base("Aquila", nome, Dieta.Carnivoro)
         { }
 
         //Abstract class implementations
@@ -57,7 +57,7 @@ namespace csharp_abstract_animals
 
     internal class Delfino : Animale, INuotante
     {
-        public Delfino(string nome) : base("Delfino", nome)
+        public Delfino(string nome) : base("Delfino", nome, Dieta.Carnivoro)
         { }
 
         //Abstract class implementations
@@ -68,6 +68,22 @@ namespace csharp_abstract_animals
         public override void Mangia()
         {
             Console.Write("pesce");
+        }
+    }
+
+    internal class Mucca : Animale
+    {
+        public Mucca(string nome) : base("Mucca", nome, Dieta.Erbivoro)
+        { }
+
+        //Abstract class implementations
+        public override void Verso()
+        {
+            Console.Write("muggito");
+        }
+        public override void Mangia()
+        {
+            Console.Write("erba, fieno, bacche");
         }
     }
 }

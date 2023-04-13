@@ -5,18 +5,26 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace csharp_abstract_animals
-{
+{ 
+    public enum Dieta
+    { 
+        Erbivoro,
+        Carnivoro,
+        Onnivoro
+    }
     internal abstract class Animale
     {
         //The animal's names
         public string Specie { get; private set; }
         public string Nome { get; private set; }
         public string NomeCompleto => $"{Specie} {Nome}";
+        public Dieta Dieta { get; private set; }
 
-        public Animale(string specie, string nome)
+        public Animale(string specie, string nome, Dieta dieta)
         {
             Specie = specie;
             Nome = nome;
+            Dieta = dieta;
         }
 
         /* "Dormi" Function
