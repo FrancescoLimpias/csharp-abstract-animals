@@ -14,7 +14,7 @@ namespace csharp_abstract_animals
          */
         public void Dormi()
         {
-            Console.WriteLine("Zzz");
+            Console.Write("Zzz");
         }
 
         /* "Verso" Function
