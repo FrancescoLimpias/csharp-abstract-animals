@@ -8,5 +8,9 @@ namespace csharp_abstract_animals
 {
     internal interface IVolante
     {
+        void Vola()
+        {
+            Console.Write("Sto volando!!!");
+        }
     }
 }

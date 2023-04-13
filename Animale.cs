@@ -8,7 +8,7 @@ namespace csharp_abstract_animals
 {
     internal abstract class Animale
     {
-        //The animal's name
+        //The animal's names
         public string Specie { get; private set; }
         public string Nome { get; private set; }
         public string NomeCompleto => $"{Specie} {Nome}";
