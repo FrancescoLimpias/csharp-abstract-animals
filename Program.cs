@@ -17,5 +17,15 @@
                 Console.WriteLine("-------------");
             }
         }
+
+        //Methods for interfaces (IVolante, INuotante) testing
+        static void FaiVolare(IVolante volante)
+        {
+            volante.Vola();
+        }
+        static void FaiNuotare(INuotante nuotante)
+        {
+            nuotante.Nuota();
+        }
     }
 }
